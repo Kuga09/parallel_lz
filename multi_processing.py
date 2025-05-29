@@ -39,8 +39,8 @@ class Multi_processing:
             chunk_results = pool.map(self.calculate_factorial, chunks)
             parallel_results = [item for chunk in chunk_results for item in chunk]
         
-        execution_time = time.time() - start
-        return parallel_results, execution_time
+        mp_time = time.time() - start
+        return parallel_results, mp_time
     
     def results_of_comparison(self, data):
     
